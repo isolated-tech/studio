@@ -73,9 +73,9 @@ function CaseStudies({
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          We leverage cutting-edge technology to solve tomorrow&apos;s
+          challenges today. Our solutions empower businesses to innovate and
+          thrive in an ever-evolving digital landscape.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -130,8 +130,9 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          We help you spot what’s next and turn promising opportunities into
+          real results – with the insight and support you need every step of the
+          way.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -147,23 +148,24 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+              We specialize in crafting beautiful, high quality marketing pages
+              that convert visitors into customers through stunning design and
+              flawless performance.
             </ListItem>
             <ListItem title="Application development">
               We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+              app frameworks, delivering powerful, custom solutions that solve
+              real business challenges and delight users.
             </ListItem>
             <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+              We are at the forefront of modern e-commerce development, building
+              scalable online stores that drive sales and provide seamless
+              shopping experiences.
             </ListItem>
             <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+              At Isotech we understand the importance of having a robust and
+              customised CMS that empowers your team to manage content
+              efficiently while maintaining complete creative control.
             </ListItem>
           </List>
         </div>
