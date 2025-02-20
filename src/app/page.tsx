@@ -185,13 +185,13 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            Building relationships that resonate.
+            We Build Digital Success
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a digital studio working at the intersection of design and
-            technology. Here, we forge sophisticated digital experiences that
-            blend bold aesthetics with cutting-edge innovation, crafting
-            tomorrow’s digital landscape.
+            We craft digital experiences that propel your business forward. Our
+            expert team blends stunning design with technical excellence to
+            create websites that don&apos;t just look great – they deliver real
+            results.
           </p>
         </FadeIn>
       </Container>
