@@ -20,7 +20,7 @@ export function ContactSection() {
             {/* TODO: Keep the section. Replace the offices content with other info */}
             <div className="mt-10 border-t border-white/10 pt-10">
               <h3 className="font-display text-base font-semibold text-white">
-                Our offices
+                Our office
               </h3>
               <Offices
                 invert

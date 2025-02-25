@@ -97,7 +97,7 @@ function ContactDetails() {
   return (
     <FadeIn>
       <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
+        Our office
       </h2>
       <p className="mt-6 text-base text-neutral-600">
         Prefer doing things in person? We don’t but we have to list our
@@ -112,8 +112,8 @@ function ContactDetails() {
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['Support', 'support@isolated.tech'],
+            ['Press', 'press@isolated.tech'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
