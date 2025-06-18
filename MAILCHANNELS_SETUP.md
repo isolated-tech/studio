@@ -28,14 +28,20 @@ v=mc1 cfid=YOUR_CLOUDFLARE_ACCOUNT_NAME.pages.dev
    - TTL: Auto
 6. Save
 
-### Alternative: SPF Record
+### Required: SPF Record
 
-If the above doesn't work, try adding MailChannels to your SPF record:
+You MUST also update your SPF record to include MailChannels:
 
-Update your existing SPF record to include MailChannels:
+1. Find your existing SPF record (Type: TXT, starts with "v=spf1")
+2. Update it to include MailChannels:
 ```
 v=spf1 include:_spf.mx.cloudflare.net include:_spf.mailchannels.net ~all
 ```
+
+Or if you don't have an SPF record, create one:
+- Type: TXT
+- Name: @ (or isolated.tech)
+- Content: `v=spf1 include:_spf.mx.cloudflare.net include:_spf.mailchannels.net ~all`
 
 ## Verify Setup
 
