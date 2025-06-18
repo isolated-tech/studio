@@ -57,12 +57,18 @@ ${message}
       }),
     });
 
+    console.log('Sending email to:', env.TO_EMAIL || 'support@isolated.tech');
+    console.log('From:', env.FROM_EMAIL || 'noreply@isolated.tech');
+    
     const response = await fetch(sendRequest);
+    const responseText = await response.text();
     
     if (!response.ok) {
-      console.error('Email send failed:', await response.text());
-      throw new Error('Failed to send email');
+      console.error('MailChannels API error:', response.status, responseText);
+      throw new Error(`MailChannels error: ${response.status}`);
     }
+    
+    console.log('Email sent successfully');
 
     return new Response(JSON.stringify({ success: true, message: 'Thank you for your message. We\'ll get back to you soon!' }), {
       status: 200,
