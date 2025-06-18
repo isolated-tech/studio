@@ -28,6 +28,7 @@ Message:
 ${message}
     `.trim();
 
+    // MailChannels configuration for Cloudflare Pages
     const sendRequest = new Request('https://api.mailchannels.net/tx/v1/send', {
       method: 'POST',
       headers: {
@@ -43,10 +44,6 @@ ${message}
           email: env.FROM_EMAIL || 'noreply@isolated.tech',
           name: 'Isolated Tech',
         },
-        reply_to: {
-          email: email,
-          name: name,
-        },
         subject: `New Contact Form Submission from ${name}`,
         content: [
           {
@@ -54,6 +51,10 @@ ${message}
             value: emailBody,
           },
         ],
+        reply_to: {
+          email: email,
+          name: name,
+        },
       }),
     });
 
@@ -61,22 +62,30 @@ ${message}
     console.log('From:', env.FROM_EMAIL || 'noreply@isolated.tech');
     
     const response = await fetch(sendRequest);
-    const responseText = await response.text();
     
-    if (!response.ok) {
-      console.error('MailChannels API error:', response.status, responseText);
-      throw new Error(`MailChannels error: ${response.status}`);
+    // MailChannels returns 202 for success
+    if (response.status === 202) {
+      console.log('Email sent successfully');
+      return new Response(JSON.stringify({ success: true, message: 'Thank you for your message. We\'ll get back to you soon!' }), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
     }
     
-    console.log('Email sent successfully');
+    // Handle errors
+    const responseText = await response.text();
+    console.error('MailChannels API error:', response.status, responseText);
+    
+    // Common error: domain not verified
+    if (response.status === 403) {
+      console.error('Domain verification required for MailChannels');
+    }
+    
+    throw new Error(`MailChannels error: ${response.status}`);
 
-    return new Response(JSON.stringify({ success: true, message: 'Thank you for your message. We\'ll get back to you soon!' }), {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-    });
   } catch (error) {
     console.error('Contact form error:', error);
     return new Response(JSON.stringify({ error: 'Failed to process your request. Please try again later.' }), {
