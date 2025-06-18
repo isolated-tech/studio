@@ -129,7 +129,7 @@ export function ContactForm() {
         
         {submitStatus === 'success' && (
           <div className="mt-6 rounded-lg bg-green-50 p-4 text-sm text-green-800">
-            Thank you for your message! We'll get back to you soon.
+            Thank you for your message! We&apos;ll get back to you soon.
           </div>
         )}
         
@@ -140,7 +140,7 @@ export function ContactForm() {
         )}
         
         <Button type="submit" className="mt-10" disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : "Let's work together"}
+          {isSubmitting ? 'Sending...' : "Let&apos;s work together"}
         </Button>
       </form>
     </FadeIn>
