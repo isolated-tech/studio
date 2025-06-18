@@ -1,3 +1,0 @@
-This file tests that auto-deploy is working.
-Created at: 2025-06-17 20:10 PST
-If you see this file on the live site, auto-deploy is working!
