@@ -41,7 +41,7 @@ ${message}
         ],
         from: {
           email: env.FROM_EMAIL || 'noreply@isolated.tech',
-          name: 'Isolated Tech Contact Form',
+          name: 'Isolated Tech',
         },
         reply_to: {
           email: email,

@@ -94,7 +94,7 @@ export function ContactForm() {
 
   return (
     <FadeIn className="lg:order-last">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} method="POST" action="/api/contact">
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>

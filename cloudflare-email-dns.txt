@@ -1,0 +1,17 @@
+# DNS Records for Cloudflare Email
+
+## Required MX Records (Auto-added by Cloudflare)
+# These will be automatically added when you enable Email Routing
+
+## SPF Record (Add this manually)
+Type: TXT
+Name: @
+Content: "v=spf1 include:_spf.mx.cloudflare.net ~all"
+
+## DMARC Record (Recommended)
+Type: TXT
+Name: _dmarc
+Content: "v=DMARC1; p=none; rua=mailto:dmarc@isolated.tech"
+
+## DKIM (Will be provided by Cloudflare)
+# Cloudflare will provide DKIM records when you enable Email Routing
