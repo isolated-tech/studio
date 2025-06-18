@@ -39,4 +39,4 @@ jobs:
           projectName: studio
           directory: out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          deployment-name: ${{ github.event_name == 'push' && 'Production' || format('Preview - PR #{0}', github.event.pull_request.number) }}
+          branch: ${{ github.ref_name }}
