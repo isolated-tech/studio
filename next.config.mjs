@@ -14,7 +14,18 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-  output: 'export',
+  async rewrites() {
+    return [
+      {
+        source: '/i18n/demo',
+        destination: 'https://www.i18nlocale.com',
+      },
+      {
+        source: '/i18n/demo/:path*',
+        destination: 'https://www.i18nlocale.com/:path*',
+      },
+    ]
+  },
 }
 
 function remarkMDXLayout(source, metaName) {
