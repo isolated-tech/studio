@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/i18n/demo",
+      "destination": "https://www.i18nlocale.com"
+    },
+    {
+      "source": "/i18n/demo/:path*",
+      "destination": "https://www.i18nlocale.com/:path*"
+    }
+  ]
+}
