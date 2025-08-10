@@ -1,1 +1,0 @@
-import{av as r,r as o}from"./DRgeaY00.js";const l=r("codeStore",()=>{const s=o(),t=o({}),u=o("javascript");return{code:s,setCode:e=>{s.value=e},codeOutput:t,setCodeOutput:(e,c)=>{t.value[e.code]=c},getCodeOutput:e=>JSON.stringify(t.value[e.code]),fileType:u,setFileType:e=>{u.value=e}}});export{l as u};

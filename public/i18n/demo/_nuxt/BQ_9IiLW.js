@@ -1,1 +1,0 @@
-import{f as r,h as e,C as i,g as s}from"./DRgeaY00.js";const p=t=>{const n=s(t);return r({inheritAttrs:!1,setup(a,{attrs:o}){return()=>e("div",[e(i,void 0,{default:()=>e(n,o)})])}})};export{p as createClientPage};
