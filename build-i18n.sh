@@ -7,8 +7,11 @@ echo "Building i18nlocale project..."
 # Navigate to i18n-ai directory and build
 cd /Users/codybontecou/dev/i18n-ai
 
-# Generate static site with Nuxt
-npm run generate
+# Copy the static config file
+cp /Users/codybontecou/dev/isotech/isolated.tech/studio/nuxt.config.static.ts ./nuxt.config.static.ts
+
+# Generate static site with Nuxt using the static config
+npx nuxi generate --dotenv .env --config nuxt.config.static.ts
 
 # Remove old build if exists
 rm -rf /Users/codybontecou/dev/isotech/isolated.tech/studio/public/i18n
