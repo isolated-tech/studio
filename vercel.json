@@ -1,3 +1,9 @@
 {
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/i18n/demo",
+      "destination": "/i18n/demo/blog/index.html"
+    }
+  ]
 }
