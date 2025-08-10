@@ -1,0 +1,1 @@
+import{e as a,f as s,h as n,j as e,s as t,z as _,a as o,d as f}from"./BYaV4dov.js";const p=()=>({legacy:!1,locale:"en",messages:{eng_Latn:a,fra_Latn:s,hin_Deva:n,jpn_Jpan:e,spa_Latn:t,zho_Hans:_,zho_Hant:o,deu_Latn:f}});export{p as default};
